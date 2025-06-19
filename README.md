@@ -6,14 +6,13 @@
 ## セットアップ
 
 ```bash
-# 1. 仮想環境を作成・有効化
-python -m venv .venv
-source .venv/bin/activate   # Windows の場合は：.venv\Scripts\activate
+# (1) Python3 がインストールされていない場合
+brew install python
 
-# 2. 必要なパッケージをインストール
-pip install playwright
+# (2) 必要なパッケージをインストール
+pip3 install playwright
 
-# 3. Playwright のブラウザをインストール
+# (3) Playwright のブラウザをインストール
 playwright install
 ```
 
@@ -23,7 +22,7 @@ playwright install
 
 ```bash
 # 手動ログインしてセッション情報を state.json に保存
-python login.py
+python3 login.py
 ```
 
 - ブラウザが起動したら Slack にログインしてください。
@@ -32,7 +31,7 @@ python login.py
 ### 自動処理の実行
 
 ```bash
-python script.py
+python3 script.py
 ```
 
 - `state.json` を利用して Slack に自動ログインし、所定の処理を実行します。
@@ -42,7 +41,7 @@ python script.py
 以降はログイン状態が保存されているため、以下だけで OK です。
 
 ```bash
-python script.py
+python3 script.py
 ```
 
 ## ファイル構成
